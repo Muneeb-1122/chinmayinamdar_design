@@ -24,6 +24,22 @@ html, body {
     height: 100%;
     scrollbar-width: none;
     scroll-behavior:smooth;
+    user-select: none;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: fixed; /* This ensures it follows the viewport */
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: transform 0.2s ease-out;
+    z-index: 999;
+    transform: translate(-55%, -55%); /* Ensures it's always centered */
 }
 
 #main {
@@ -90,7 +106,7 @@ li {
     display: flex;
     align-items: center;
     position: absolute;
-    right: 0%;
+    right: -5%;
     bottom: -30%;
 }
 
@@ -127,7 +143,7 @@ li {
     }
 }
 
-.rotate:hover {
+.animate-circle:hover .rotate {
     animation-duration: 5s;
 }
 
