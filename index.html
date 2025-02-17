@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- shery js css -->
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <link rel="stylesheet" href="style.css">
     <title>chinmayinamdar design</title>
 </head>
 
 <body>
     <div id="main">
+        <div class="cursor"></div>
         <nav>
             <div class="left-nav">
-                <h1>Chinmay Inamdar</h1>
+                <h1 class="magnet">Chinmay Inamdar</h1>
             </div>
             <div class="right-nav">
                 <ul>
-                    <li>About Me</li>
-                    <li>Resume</li>
-                    <li>Hop on call</li>
+                    <li class="magnet">About Me</li>
+                    <li class="magnet">Resume</li>
+                    <li class="magnet">Hop on call</li>
                 </ul>
             </div>
         </nav>
@@ -30,7 +29,7 @@
                 <h1>With a Focus On</h1>
                 <h1>Design Systems &</h1>
                 <h1>Stunning Visuals.</h1>
-                <div class="animate-circle">
+                <div class="animate-circle magnet">
                     <div class="circle">
                         <img class="rotate" width="60%" src="./imgs/circle.svg" alt="">
                         <div class="phone">
@@ -49,7 +48,7 @@
         <div class="cards flex aligns-center">
             <div class="card card-1">
                 <div class="img flex aligns-center">
-                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-1.webp" alt="">
+                    <img class="transition-all duration-[0.5s]" height="100%" width="100%" src="./imgs/card-img-1.webp" alt="">
                 </div>
                 <div class="text">
                     <h2>Simplified</h2>
@@ -58,7 +57,7 @@
             </div>
             <div class="card card-2">
                 <div class="img flex aligns-center">
-                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-2.webp" alt="">
+                    <img class="transition-all duration-[0.5s]" height="100%" width="100%" src="./imgs/card-img-2.webp" alt="">
                 </div>
                 <div class="text">
                     <h2>Simplified</h2>
@@ -67,7 +66,7 @@
             </div>
             <div class="card card-3">
                 <div class="img flex aligns-center">
-                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-3.webp" alt="">
+                    <img class="transition-all duration-[0.5s]" height="100%" width="100%" src="./imgs/card-img-3.webp" alt="">
                 </div>
                 <div class="text">
                     <h2>Simplified</h2>
@@ -76,7 +75,7 @@
             </div>
             <div class="card card-4">
                 <div class="img flex aligns-center">
-                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-4.webp" alt="">
+                    <img class="transition-all duration-[0.5s] " height="100%" width="100%" src="./imgs/card-img-4.webp" alt="">
                 </div>
                 <div class="text">
                     <h2>Simplified</h2>
@@ -103,19 +102,8 @@
         </div>
     </footer>
 
-
-    <!--  Gsap is needed for Basic Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <!-- Scroll Trigger is needed for Scroll Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Three.js is needed for 3d Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-
-    <!-- ControlKit is needed for Debug Panel -->
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
 </body>
