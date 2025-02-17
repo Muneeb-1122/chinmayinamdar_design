@@ -38,7 +38,6 @@ html, body {
     pointer-events: none;
     mix-blend-mode: difference;
     transition: transform 0.2s ease-out;
-    z-index: 999;
     transform: translate(-55%, -55%); /* Ensures it's always centered */
 }
 
@@ -163,6 +162,26 @@ li {
 
 /* section 2 */
 
+.section-curser {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'fontB';
+    pointer-events: none;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+}
+
 #section-2 {
     width: 100%;
     min-height: 100vh;
@@ -198,11 +217,12 @@ li {
     flex-wrap: wrap;
 }
 .card {
-    width: 45%;
+    width: 47.5%;
     min-height: 120vh;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
 }
 .img {
     width: 100%;
@@ -266,7 +286,7 @@ footer h3 {
     gap: 1rem;
 }
 
-footer button {
+footer button:nth-child(1) {
     padding: 1rem 2rem;
     border: none;
     background-color: #fff;
@@ -276,13 +296,100 @@ footer button {
     font-size: 1.5vw;
     text-transform: uppercase;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+footer button:nth-child(1)::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: .4s all ease-in-out;
+    position: absolute;
+    top: 0; left: 0%;
+}
+
+footer button:nth-child(1)::after{
+    content: "HOP ON CALL";
+    width: 100%;
+    height: 100%;
+    background-color: #FF6161;
+    border-radius: 30px;
+    transition: .4s all ease-in-out;
+    position: absolute;
+    top: 0; right: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer button:hover:nth-child(1)::after{
+    right: 0;
+}
+
+footer button:hovernth-child(1)::before{
+    left: 0;
+}
+
+footer button:nth-child(1):hover {
+    cursor: pointer;
 }
 
 footer button:nth-child(2) {
-    background-color: transparent;
-    color: #fff;
+    padding: 1rem 2rem;
     border: 1px solid #fff;
+    background-color: none;
+    color: #fff;
+    border-radius: 50px;
+    font-family: "font1";
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
+
+footer button:nth-child(2)::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: .4s all ease-in-out;
+    position: absolute;
+    top: 0; left: 0%;
+}
+
+footer button:nth-child(2)::after{
+    content: "COPY EMAIL";
+    width: 100%;
+    height: 100%;
+    background-color: #E8E8E8;
+    transition: .4s all ease-in-out;
+    position: absolute;
+    top: 0; right: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    border: none;
+}
+
+footer button:hover:nth-child(2)::after{
+    right: 0;
+}
+
+footer button:hovernth-child(2)::before{
+    left: 0;
+}
+
+footer button:nth-child(2):hover {
+    cursor: pointer;
+}
+
 
 .social {
     display: flex;
