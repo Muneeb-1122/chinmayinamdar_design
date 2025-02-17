@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- shery js css -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <link rel="stylesheet" href="style.css">
     <title>chinmayinamdar design</title>
 </head>
+
 <body>
     <div id="main">
         <nav>
@@ -22,7 +26,7 @@
         </nav>
         <div class="hero-text">
             <div class="text">
-                <h1>UX Designer</h1> 
+                <h1>UX Designer</h1>
                 <h1>With a Focus On</h1>
                 <h1>Design Systems &</h1>
                 <h1>Stunning Visuals.</h1>
@@ -35,40 +39,48 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
     <div id="section-2">
-        <img src="./imgs/section-2-img.svg" alt="">
+        <img class="section-2-top-img" src="./imgs/section-2-img.svg" alt="">
         <div class="secion-2-top-text">
             <h1>Relevant Work</h1>
         </div>
-        <div class="cards">
+        <div class="cards flex aligns-center">
             <div class="card card-1">
-                <div class="card-img card-1-img"></div>
-                <div class="card-content">
+                <div class="img flex aligns-center">
+                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-1.webp" alt="">
+                </div>
+                <div class="text">
                     <h2>Simplified</h2>
                     <p>Harnessing AI to Fuel Creativity</p>
                 </div>
             </div>
             <div class="card card-2">
-                <div class="card-img card-2-img"></div>
-                <div class="card-content">
-                    <h2>Playpal</h2>
-                    <p>Connect. Join. Play effortlessly.</p>
+                <div class="img flex aligns-center">
+                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-2.webp" alt="">
+                </div>
+                <div class="text">
+                    <h2>Simplified</h2>
+                    <p>Harnessing AI to Fuel Creativity</p>
                 </div>
             </div>
             <div class="card card-3">
-                <div class="card-img card-3-img"></div>
-                <div class="card-content">
-                    <h2>Monovo</h2>
-                    <p>Branding Inspired By Massimo Vignelli</p>
+                <div class="img flex aligns-center">
+                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-3.webp" alt="">
+                </div>
+                <div class="text">
+                    <h2>Simplified</h2>
+                    <p>Harnessing AI to Fuel Creativity</p>
                 </div>
             </div>
             <div class="card card-4">
-                <div class="card-img card-4-img"></div>
-                <div class="card-content">
-                    <h2>NextArena</h2>
-                    <p>Tournaments For Pro Players</p>
+                <div class="img flex aligns-center">
+                    <img class="transition-all" height="100%" width="100%" src="./imgs/card-img-4.webp" alt="">
+                </div>
+                <div class="text">
+                    <h2>Simplified</h2>
+                    <p>Harnessing AI to Fuel Creativity</p>
                 </div>
             </div>
         </div>
@@ -90,5 +102,21 @@
             <h4>LinkedIn</h4>
         </div>
     </footer>
+
+
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
 </body>
 </html>
