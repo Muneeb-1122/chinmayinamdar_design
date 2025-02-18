@@ -40,7 +40,7 @@ document.addEventListener("mousemove", (e) => {
 // Scale up cursor on hover
 buttons.forEach((magnet) => {
   magnet.addEventListener("mouseenter", () => {
-    gsap.to(cursor, { scale: 3, background: "#000", duration: 0.2 });
+    gsap.to(cursor, { scale: 3, background: "#ff6161", duration: 0.2 });
     gsap.to(magnet, { scale: 1.1, duration: 0.3 });
   });
 

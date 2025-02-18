@@ -26,6 +26,7 @@ body {
   scrollbar-width: none;
   scroll-behavior: smooth;
   user-select: none;
+  cursor: none;
 }
 
 .cursor {
@@ -186,7 +187,7 @@ li {
   color: #fff;
   font-family: "fontB";
   pointer-events: none;
-  background-color: red;
+  background-color: #ff6161;
   position: absolute;
   top: 0;
   left: 0;
