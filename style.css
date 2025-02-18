@@ -1,161 +1,167 @@
 @font-face {
-    font-family: font1;
-    src: url("./fonts/ClashDisplay-Bold.otf");
+  font-family: font1;
+  src: url("./fonts/ClashDisplay-Bold.otf");
 }
 
 @font-face {
-    font-family: fontR;
-    src: url("./fonts/helvetica-regular.otf");
+  font-family: fontR;
+  src: url("./fonts/helvetica-regular.otf");
 }
 
 @font-face {
-    font-family: fontB;
-    src: url("./fonts/Helvetica-Bold-Font.ttf");
+  font-family: fontB;
+  src: url("./fonts/Helvetica-Bold-Font.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    scrollbar-width: none;
-    scroll-behavior:smooth;
-    user-select: none;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
 .cursor {
-    width: 20px;
-    height: 20px;
-    background: black;
-    border-radius: 50%;
-    position: fixed; /* This ensures it follows the viewport */
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition: transform 0.2s ease-out;
-    transform: translate(-55%, -55%); /* Ensures it's always centered */
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  position: fixed; /* This ensures it follows the viewport */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease-out;
+  transform: translate(-55%, -55%); /* Ensures it's always centered */
 }
 
 #main {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 nav {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 5%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 ul {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+i {
+    font-size: 6vw;
+    font-weight: bolder;
+    display: none;
 }
 
 li {
-    list-style: none;
-    font-family: 'fontB';
-    text-transform: uppercase;
-    mix-blend-mode: difference;
+  list-style: none;
+  font-family: "fontB";
+  text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 
 .left-nav h1 {
-    font-family: 'font1';
+  font-family: "font1";
 }
 
 /* nav bar complete */
 
 .hero-text {
-    width: 100%;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 16rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 16rem;
 }
 
 .hero-text h1 {
-    font-family: "fontB", sans-serif;
-    font-size: clamp(2rem, 8vw, 6rem); 
-    line-height: 1.1;
-    text-transform: uppercase;
+  font-family: "font1", sans-serif;
+  font-size: clamp(2rem, 8vw, 6rem);
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .animate-circle {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: -5%;
-    bottom: -30%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -5%;
+  bottom: -30%;
 }
 
 .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .rotate {
-    animation-name: spin;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
-    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: spin;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .animate-circle:hover .rotate {
-    animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 .phone {
-    background-color: #FF6161;
-    width: 50px;
-    height: 50px;
-    padding: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+  background-color: #ff6161;
+  width: 50px;
+  height: 50px;
+  padding: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 /* main section complete */
@@ -163,247 +169,338 @@ li {
 /* section 2 */
 
 .section-curser {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'fontB';
-    pointer-events: none;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "fontB";
+  pointer-events: none;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
 }
 
 #section-2 {
-    width: 100%;
-    min-height: 100vh;
-    padding: 2rem 5%;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 5%;
 }
 
 .section-2-top-img {
-    margin-left: 5rem;
+  margin-left: 5rem;
 }
 
 .secion-2-top-text {
-    display: flex;
-    align-items: center;
-    justify-content: center
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-2 h1 {
-    font-family: "font1";
-    text-transform: uppercase;
-    font-size: clamp(2rem, 8vw, 6rem); 
-    padding-bottom: 1rem;
-    line-height: 1;
+  font-family: "font1";
+  text-transform: uppercase;
+  font-size: clamp(2rem, 8vw, 6rem);
+  padding-bottom: 1rem;
+  line-height: 1;
 }
 
 /* section 2 cards */
 
 .cards {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 .card {
-    width: 47.5%;
-    min-height: 120vh;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: relative;
+  width: 47.5%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
 }
 .img {
-    width: 100%;
-    height: 95vh;
-    border-radius: 1rem;
-    overflow: hidden;
+  width: 100%;
+  height: 95vh;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .img img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .img img:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 .text h2 {
-    font-family: "fontB";
-    font-size: 4vw;
-    text-transform: uppercase;
+  font-family: "font1";
+  font-size: 4vw;
+  text-transform: uppercase;
 }
 
 .text p {
-    font-family: 'fontR';
-    font-size: 1.5vw;
+  font-family: "fontR";
+  font-size: 1.5vw;
 }
 
-/* footer */ 
+/* footer */
 
 footer {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    gap: 5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  gap: 5rem;
 }
 
 footer h1 {
-    font-family: "font1";
-    text-transform: uppercase;
-    font-size: clamp(2rem, 8vw, 6rem); 
-    padding-bottom: 1rem;
+  font-family: "font1";
+  text-transform: uppercase;
+  font-size: clamp(2rem, 8vw, 6rem);
+  padding-bottom: 1rem;
 }
 
 footer h3 {
-    font-family: "fontR";
-    text-transform: uppercase;
-    font-size: clamp(.5rem, 2vw, 2rem); 
-    padding-bottom: 1rem;
+  font-family: "fontR";
+  text-transform: uppercase;
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  padding-bottom: 1rem;
 }
 
 .footer-btns {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 footer button:nth-child(1) {
-    padding: 1rem 2rem;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    border-radius: 50px;
-    font-family: "font1";
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50px;
+  font-family: "font1";
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-footer button:nth-child(1)::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    transition: .4s all ease-in-out;
-    position: absolute;
-    top: 0; left: 0%;
+footer button:nth-child(1)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.4s all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0%;
 }
 
-footer button:nth-child(1)::after{
-    content: "HOP ON CALL";
-    width: 100%;
-    height: 100%;
-    background-color: #FF6161;
-    border-radius: 30px;
-    transition: .4s all ease-in-out;
-    position: absolute;
-    top: 0; right: 100%;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+footer button:nth-child(1)::after {
+  content: "HOP ON CALL";
+  width: 100%;
+  height: 100%;
+  background-color: #ff6161;
+  border-radius: 30px;
+  transition: 0.4s all ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
-footer button:hover:nth-child(1)::after{
-    right: 0;
+footer button:hover:nth-child(1)::after {
+  right: 0;
 }
 
-footer button:hovernth-child(1)::before{
-    left: 0;
+footer button:hovernth-child(1)::before {
+  left: 0;
 }
 
 footer button:nth-child(1):hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 footer button:nth-child(2) {
-    padding: 1rem 2rem;
-    border: 1px solid #fff;
-    background-color: none;
-    color: #fff;
-    border-radius: 50px;
-    font-family: "font1";
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  padding: 1rem 2rem;
+  border: 1px solid #fff;
+  background-color: none;
+  color: #fff;
+  border-radius: 50px;
+  font-family: "font1";
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-footer button:nth-child(2)::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    transition: .4s all ease-in-out;
-    position: absolute;
-    top: 0; left: 0%;
+footer button:nth-child(2)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.4s all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0%;
 }
 
-footer button:nth-child(2)::after{
-    content: "COPY EMAIL";
-    width: 100%;
-    height: 100%;
-    background-color: #E8E8E8;
-    transition: .4s all ease-in-out;
-    position: absolute;
-    top: 0; right: 100%;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    border: none;
+footer button:nth-child(2)::after {
+  content: "COPY EMAIL";
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  transition: 0.4s all ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  border: none;
 }
 
-footer button:hover:nth-child(2)::after{
-    right: 0;
+footer button:hover:nth-child(2)::after {
+  right: 0;
 }
 
-footer button:hovernth-child(2)::before{
-    left: 0;
+footer button:hovernth-child(2)::before {
+  left: 0;
 }
 
 footer button:nth-child(2):hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 .social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "fontB";
-    font-size: 2vw;
-    gap: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "fontB";
+  font-size: 2vw;
+  gap: 4rem;
 }
 
 /* css complete */
 
 @media (max-width: 768px) {
-    .right-nav {
-        display: none;
-    }
+  #main {
+    padding: 1rem 2rem;
+    width: 100%;
+    height: auto;
+  }
+  .right-nav ul {
+    display: none;
+  }
+  i {
+    display: block;
+  }
+  .left-nav h1 {
+    font-size: 5vw;
+  }
+  .hero-text {
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+  }
+  .animate-circle {
+    top: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 16vh);
+  }
+  .phone {
+    padding: 30px;
+  }
+  .phone img {
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+    position: absolute;
+  }
+  .text h1 {
+    font-size: 8vw;
+  }
+  .cards {
+    gap: 1rem;
+  }
+  .card {
+    width: 100%;
+    height: 50vh !important;
+  }
+  .cards {
+    height: auto;
+  }
+  .img img {
+    height: 50vh;
+  }
+  .img {
+    height: auto;
+  }
+  .text p {
+    font-size: 16px;
+  }
+  .section-2-top-img {
+    display: none;
+  }
+  /* Footer */
+  footer {
+    gap: 1.2rem;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  footer h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  footer h3 {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  footer button:nth-of-type(1),
+  footer button:nth-of-type(2) {
+    font-size: 2.5vw;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .footer-btns {
+    flex-direction: column;
+  }
+
+  .social {
+    gap: 1rem;
+  }
+  .cursor, .section-curser {
+    display: none;
+  }
 }
