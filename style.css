@@ -161,7 +161,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   position: absolute;
+}
+
+.phone img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
 }
 
 /* main section complete */
